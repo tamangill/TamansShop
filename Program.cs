@@ -1,4 +1,13 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using TamansShop.Areas.Identity.Data;
+using TamansShop.Data;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("TamansShopContextConnection") ?? throw new InvalidOperationException("Connection string 'TamansShopContextConnection' not found.");
+
+builder.Services.AddDbContext<TamansShopContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddDefaultIdentity<TamansShopUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<TamansShopContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -23,5 +32,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapRazorPages();
 app.Run();
