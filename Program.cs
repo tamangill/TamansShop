@@ -7,7 +7,7 @@ var connectionString = builder.Configuration.GetConnectionString("TamansShopCont
 
 builder.Services.AddDbContext<TamansShopContext>(options => options.UseNpgsql(connectionString));
 
-builder.Services.AddDefaultIdentity<TamansShopUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<TamansShopContext>();
+builder.Services.AddDefaultIdentity<TamansShopUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<TamansShopContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
