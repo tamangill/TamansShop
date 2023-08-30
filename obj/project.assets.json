@@ -11772,11 +11772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tamangill/Desktop/Tamans's Shop/TamansShop/TamansShop.csproj",
+      "projectUniqueName": "/Users/tamangill/Desktop/TamansShop/TamansShop.csproj",
       "projectName": "TamansShop",
-      "projectPath": "/Users/tamangill/Desktop/Tamans's Shop/TamansShop/TamansShop.csproj",
+      "projectPath": "/Users/tamangill/Desktop/TamansShop/TamansShop.csproj",
       "packagesPath": "/Users/tamangill/.nuget/packages/",
-      "outputPath": "/Users/tamangill/Desktop/Tamans's Shop/TamansShop/obj/",
+      "outputPath": "/Users/tamangill/Desktop/TamansShop/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/tamangill/.nuget/NuGet/NuGet.Config"

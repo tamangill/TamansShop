@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bpx3zkdcYDN8ULfE7JLU2XKR3lMI+0XOb8bwlQsR9R1lnma5A9xc5+E/Y9pe+BCIRpMbZbUrq/j3XwWpuBMmdQ==",
+  "dgSpecHash": "LUT7cv1zuKcN4NGDGTxTUEDnMTYAbY7ep3Iz0QVj55hn+dynGgrUapkabFBPfA8rjdiVayCgY/ZfOJNirTP2Ng==",
   "success": true,
-  "projectFilePath": "/Users/tamangill/Desktop/Tamans's Shop/TamansShop/TamansShop.csproj",
+  "projectFilePath": "/Users/tamangill/Desktop/TamansShop/TamansShop.csproj",
   "expectedPackageFiles": [
     "/Users/tamangill/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/tamangill/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
