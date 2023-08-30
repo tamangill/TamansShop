@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TamansShop.Areas.Identity.Data;
+using TamansShop.Models;
 
 namespace TamansShop.Data;
 
@@ -11,7 +12,9 @@ public class TamansShopContext : IdentityDbContext<TamansShopUser>
     public TamansShopContext(DbContextOptions<TamansShopContext> options)
         : base(options)
     {
+        
     }
+    public DbSet<Product> Products { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
