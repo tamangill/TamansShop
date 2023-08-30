@@ -11,6 +11,8 @@ builder.Services.AddDefaultIdentity<TamansShopUser>(options => options.SignIn.Re
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Logging.AddConsole(); // Add console logging provider
+builder.Logging.AddDebug();
 
 var app = builder.Build();
 

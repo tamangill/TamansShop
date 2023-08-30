@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TamansShop.Data;
@@ -11,9 +12,11 @@ using TamansShop.Data;
 namespace TamansShop.Migrations
 {
     [DbContext(typeof(TamansShopContext))]
-    partial class TamansShopContextModelSnapshot : ModelSnapshot
+    [Migration("20230830015544_AddUserIdColumn")]
+    partial class AddUserIdColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -264,6 +267,8 @@ namespace TamansShop.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Products");
                 });
 
@@ -316,6 +321,17 @@ namespace TamansShop.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TamansShop.Models.Product", b =>
+                {
+                    b.HasOne("TamansShop.Areas.Identity.Data.TamansShopUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }

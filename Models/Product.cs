@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using TamansShop.Areas.Identity.Data;
 
 namespace TamansShop.Models
 {
@@ -16,6 +17,10 @@ namespace TamansShop.Models
         public decimal Price { get; set; }
 
         public string ImagePath { get; set; }
+        
+        [Required]
+        public string UserId { get; set; }  // User's Id who added the product
+
 
 
     }
